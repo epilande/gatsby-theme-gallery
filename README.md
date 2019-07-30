@@ -1,1 +1,1 @@
-gatsby-theme-minimal/README.md
+gatsby-theme-gallery/README.md
