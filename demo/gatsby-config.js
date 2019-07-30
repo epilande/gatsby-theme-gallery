@@ -1,9 +1,9 @@
 module.exports = {
   plugins: [
     {
-      resolve: "gatsby-theme-minimal",
+      resolve: "gatsby-theme-gallery",
       options: {
-        basePath: "/minimal",
+        basePath: "/gallery",
       },
     },
     "gatsby-plugin-typescript",

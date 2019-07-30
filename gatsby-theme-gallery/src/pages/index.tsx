@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div>
       <h1>
-        <pre>Hello, gatsby-theme-minimal</pre>
+        <pre>Hello, gatsby-theme-gallery</pre>
       </h1>
       <Link to="/">Back</Link>
     </div>
