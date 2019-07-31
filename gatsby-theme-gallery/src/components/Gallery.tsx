@@ -37,7 +37,7 @@ const Gallery = () => {
           </Tile>
         ))}
       </Grid>
-      {showImageIndex && (
+      {showImageIndex !== undefined && (
         <Lightbox
           hideDownload={true}
           large={images[showImageIndex].publicURL}
