@@ -25,32 +25,31 @@ export default {
       alignItems: "center",
       justifyContent: "space-between",
       marginBottom: "1rem",
-      a: {
-        color: "text",
-        marginLeft: "1rem",
-        fontSize: 1,
-        "&:hover": {
-          opacity: 0.75,
-        },
-      },
     },
     Footer: {
       position: "fixed",
       left: 0,
       bottom: 0,
       width: "100%",
-      padding: "0 1rem",
+      padding: "0 1.5rem",
       backgroundColor: "background",
       fontSize: 1,
-      p: {
-        margin: "0.75rem",
-      },
+      alignItems: "center",
+      justifyContent: "space-between",
     },
     h1: {
       color: "text",
       fontWeight: 400,
       lineHeight: "1.2",
       fontSize: [3, 4, 5],
+    },
+    a: {
+      color: "text",
+      marginLeft: "1rem",
+      fontSize: 1,
+      "&:hover": {
+        opacity: 0.75,
+      },
     },
   },
 };
