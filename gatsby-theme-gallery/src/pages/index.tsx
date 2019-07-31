@@ -10,6 +10,18 @@ const HomePage = () => {
     <Layout>
       <Header>
         <Styled.h1>{siteMetadata.title}</Styled.h1>
+        <Styled.div>
+          {siteMetadata.social.map(social => (
+            <a
+              key={social.url}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {social.name}
+            </a>
+          ))}
+        </Styled.div>
       </Header>
       <Gallery />
       {siteMetadata.author && (

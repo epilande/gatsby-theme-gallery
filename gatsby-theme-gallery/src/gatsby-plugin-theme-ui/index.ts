@@ -22,7 +22,17 @@ export default {
       padding: "0 1rem",
     },
     Header: {
+      alignItems: "center",
+      justifyContent: "space-between",
       marginBottom: "1rem",
+      a: {
+        color: "text",
+        marginLeft: "1rem",
+        fontSize: 1,
+        "&:hover": {
+          opacity: 0.75,
+        },
+      },
     },
     Footer: {
       position: "fixed",
@@ -40,7 +50,7 @@ export default {
       color: "text",
       fontWeight: 400,
       lineHeight: "1.2",
-      fontSize: 5,
+      fontSize: [3, 4, 5],
     },
   },
 };
