@@ -6,6 +6,7 @@ interface Query {
     nodes: {
       id: string;
       name: string;
+      publicURL: string;
       childImageSharp: {
         fluid: FluidObject;
       };
@@ -20,6 +21,7 @@ const useGallery = () => {
         nodes {
           id
           name
+          publicURL
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -34,6 +36,7 @@ const useGallery = () => {
     ...node.childImageSharp,
     id: node.id,
     name: node.name,
+    publicURL: node.publicURL,
   }));
 };
 
