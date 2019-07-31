@@ -7,6 +7,21 @@ import useGallery from "../hooks/useGallery";
 import Grid from "./Grid";
 import Tile from "./Tile";
 
+const imgStyles: any = {
+  css: {
+    position: "absolute",
+    left: 0,
+    top: 0,
+    width: "100%",
+    height: "100%",
+    transition: "transform 0.5s, filter 0.25s",
+    "&:hover": {
+      transform: "scale(1.1)",
+      filter: "saturate(1.3)",
+    },
+  },
+};
+
 const Gallery = () => {
   const images = useGallery();
   const [showImageIndex, setShowImageIndex] = React.useState<
@@ -23,17 +38,7 @@ const Gallery = () => {
               setShowImageIndex(index);
             }}
           >
-            <Img
-              alt={image.name}
-              fluid={image.fluid}
-              style={{
-                position: "absolute",
-                left: 0,
-                top: 0,
-                width: "100%",
-                height: "100%",
-              }}
-            />
+            <Img alt={image.name} fluid={image.fluid} {...imgStyles} />
           </Tile>
         ))}
       </Grid>
