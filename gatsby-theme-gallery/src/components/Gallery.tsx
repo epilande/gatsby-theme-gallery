@@ -1,25 +1,16 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import styled from "@emotion/styled";
 import Img from "gatsby-image";
 import useGallery from "../hooks/useGallery";
-
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-auto-rows: 15rem;
-  grid-gap: 0.5rem;
-`;
-
-const Tile = styled.div`
-  position: relative;
-`;
+import Grid from "./Grid";
+import Tile from "./Tile";
 
 const Gallery = () => {
   const images = useGallery();
+  console.log("TCL: Gallery -> images", images);
 
   return (
-    <GridContainer>
+    <Grid>
       {images.map(image => (
         <Tile key={image.id}>
           <Img
@@ -35,7 +26,7 @@ const Gallery = () => {
           />
         </Tile>
       ))}
-    </GridContainer>
+    </Grid>
   );
 };
 
