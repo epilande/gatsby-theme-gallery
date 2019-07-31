@@ -1,5 +1,7 @@
 import * as React from "react";
-import { Styled, Layout, Header, Footer } from "theme-ui";
+import { Layout } from "theme-ui";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
@@ -8,27 +10,9 @@ const HomePage = () => {
 
   return (
     <Layout>
-      <Header>
-        <Styled.h1>{siteMetadata.title}</Styled.h1>
-        <Styled.div>
-          {siteMetadata.social.map(social => (
-            <a
-              key={social.url}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {social.name}
-            </a>
-          ))}
-        </Styled.div>
-      </Header>
+      <Header />
       <Gallery />
-      {siteMetadata.author && (
-        <Footer>
-          <p>{`© ${new Date().getFullYear()} ${siteMetadata.author}`}</p>
-        </Footer>
-      )}
+      {siteMetadata.author && <Footer />}
     </Layout>
   );
 };
