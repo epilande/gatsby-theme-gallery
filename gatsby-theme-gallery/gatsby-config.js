@@ -8,6 +8,10 @@ module.exports = options => {
       author: "epilande",
       social: [
         {
+          name: "Source",
+          url: "https://github.com/epilande/gatsby-theme-gallery",
+        },
+        {
           name: "Twitter",
           url: "https://twitter.com/_epilande",
         },
