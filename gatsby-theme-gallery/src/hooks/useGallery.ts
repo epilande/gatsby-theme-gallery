@@ -18,7 +18,10 @@ const useGallery = () => {
   // TODO: Make "content/gallery" dynamic somehow..
   const data = useStaticQuery<Query>(graphql`
     query {
-      allFile(filter: { sourceInstanceName: { eq: "content/gallery" } }) {
+      allFile(
+          filter: { sourceInstanceName: { eq: "content/gallery" } },
+          sort: { order: ASC, fields: name }
+      ) {
         nodes {
           id
           name
